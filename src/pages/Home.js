@@ -1,14 +1,9 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
-=======
-import React from 'react';
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
 import HeroSection from '../components/HeroSection';
 import FeatureCard from '../components/FeatureCard';
 import BlogPreview from '../components/BlogPreview';
 import Footer from '../components/Footer';
 
-<<<<<<< HEAD
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -18,10 +13,6 @@ import { Navigation, Pagination } from 'swiper/modules';
 const Home = () => {
   const [latestPosts, setLatestPosts] = useState([]);
 
-=======
-
-const Home = () => {
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
   const features = [
     {
       imageSrc: '/assets/write-freely.webp',
@@ -40,7 +31,6 @@ const Home = () => {
     },
   ];
 
-<<<<<<< HEAD
   useEffect(() => {
   const fetchLatestPosts = async () => {
     try {
@@ -63,38 +53,12 @@ const Home = () => {
   fetchLatestPosts();
 }, []);
 
-=======
-  const blogPosts = [
-    {
-      imageSrc: '/assets/react.jpg',
-      title: 'React Tips and Tricks',
-      excerpt: 'Improve your React skills with these expert tips.',
-      author: 'Alice',
-    },
-    {
-      imageSrc: '/assets/tailwind.webp',
-      title: 'Understanding Tailwind CSS',
-      excerpt: 'Tailwind makes styling easy and fun. Learn why.',
-      author: 'Bob',
-    },
-    {
-      imageSrc: '/assets/vercel.png',
-      title: 'Deploying with Vercel',
-      excerpt: 'Steps to easily deploy your React app on Vercel.',
-      author: 'Clara',
-    },
-  ];
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
 
   return (
     <div>
       <HeroSection />
 
-<<<<<<< HEAD
       {/* Features Section */}
-=======
-      {/* Features */}
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
       <section className="py-20 bg-gray-100">
         <div className="max-w-6xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-10">Why Choose Blogify?</h2>
@@ -106,7 +70,6 @@ const Home = () => {
         </div>
       </section>
 
-<<<<<<< HEAD
       {/* Latest Blog Posts Slider */}
       <section className="py-20 bg-white">
         <div className="max-w-6xl mx-auto px-6">
@@ -142,20 +105,6 @@ const Home = () => {
       </section>
 
       <Footer />
-=======
-      {/* Blog Previews */}
-      <section className="py-20 bg-white">
-        <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-10">Latest Blog Posts</h2>
-          <div className="grid gap-8 grid-cols-1 md:grid-cols-3">
-            {blogPosts.map((post, idx) => (
-              <BlogPreview key={idx} {...post} />
-            ))}
-          </div>
-        </div>
-      </section>
-      <Footer/>
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
     </div>
   );
 };

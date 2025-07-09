@@ -1,16 +1,10 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-=======
-import React, { useState } from 'react';
-import { createPost } from '../services/api';
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
 
 const CreatePost = () => {
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-<<<<<<< HEAD
   const [image, setImage] = useState(null);
   const [preview, setPreview] = useState(null);
   const [loading, setLoading] = useState(false);
@@ -61,18 +55,6 @@ const CreatePost = () => {
       setPreview(null);
 
       navigate('/all-posts'); // or to /blogs if you want to go to public view
-=======
-  const [loading, setLoading] = useState(false);
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    try {
-      await createPost({ title, content });
-      alert('Post created successfully!');
-      setTitle('');
-      setContent('');
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
     } catch (error) {
       console.error('Error creating post:', error);
       alert('Failed to create post.');
@@ -82,7 +64,6 @@ const CreatePost = () => {
   };
 
   return (
-<<<<<<< HEAD
     <div className="max-w-2xl mx-auto mt-12 px-6">
       <div className="bg-white shadow-xl rounded-lg p-8">
         <h2 className="text-3xl font-bold text-purple-700 mb-6 text-center">📝 Create a New Blog Post</h2>
@@ -128,34 +109,6 @@ const CreatePost = () => {
           </button>
         </form>
       </div>
-=======
-    <div className="p-6 max-w-xl mx-auto mt-10 bg-white rounded shadow">
-      <h2 className="text-2xl font-bold mb-4 text-purple-700">Create a New Post</h2>
-      <form onSubmit={handleSubmit} className="space-y-4">
-        <input
-          type="text"
-          placeholder="Title"
-          value={title}
-          onChange={e => setTitle(e.target.value)}
-          className="w-full p-2 border rounded"
-          required
-        />
-        <textarea
-          placeholder="Content"
-          value={content}
-          onChange={e => setContent(e.target.value)}
-          className="w-full p-2 border rounded h-40"
-          required
-        />
-        <button
-          type="submit"
-          className="w-full bg-purple-600 text-white py-2 rounded hover:bg-purple-700"
-          disabled={loading}
-        >
-          {loading ? 'Publishing...' : 'Publish'}
-        </button>
-      </form>
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
     </div>
   );
 };

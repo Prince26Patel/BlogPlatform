@@ -7,10 +7,6 @@ const API = axios.create({
   },
 });
 
-<<<<<<< HEAD
-=======
-// Optional: You can handle global errors with interceptors
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
 API.interceptors.response.use(
   response => response,
   error => {
@@ -20,7 +16,6 @@ API.interceptors.response.use(
 );
 
 export const getPosts = () => API.get('/posts');
-<<<<<<< HEAD
 export const getPost = (id) => API.get(`/posts/${id}`); // ✅ FIXED
 export const createPost = async (formData) => {
   const token = localStorage.getItem('token');
@@ -36,7 +31,3 @@ export const createPost = async (formData) => {
     }
   );
 };
-=======
-export const getPost = (id) => API.get(`/posts/${id}`);
-export const createPost = (data) => API.post('/posts', data);
->>>>>>> 905cfa78de58142ff9b7f0d9dbd6282b28bcb328
